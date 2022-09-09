@@ -2,7 +2,6 @@
  * File: 10-print_comb2.c7
  * Auth: Moses Gitau
  */
-
 #include <stdio.h>
 
 /**
