@@ -1,6 +1,6 @@
 /*
  * File: 102-print_comb5.c
- * Auth: Moses Gitau 
+ * Auth: Muhammed Abdulrahaman Adinoyi
  */
 
 #include <stdio.h>
