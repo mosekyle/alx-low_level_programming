@@ -1,1 +1,1 @@
-My first readme in C
+Programming in C language _ low level
