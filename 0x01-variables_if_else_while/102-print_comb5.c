@@ -1,7 +1,3 @@
-/*
- * File: 102-print_comb5.c
- * Auth: Muhammed Abdulrahaman Adinoyi
- */
 
 #include <stdio.h>
 
