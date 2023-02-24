@@ -1,38 +1,32 @@
 #!/usr/bin/python3
+# -*- coding: utf-8 -*-
 """
-The perimeter of the island
+Created on Fri Feb 24 2023
+@author : Moses Gitau
 """
 
 
 def island_perimeter(grid):
     """
-    Function that calculate the perimeter of the island
-    described in grid.
-    Args:
-       grid: Matrix that emulate the island grid.
-    Return:
-       Returns the perimeter of the island described in grid.
+    Calculater the Island's perimeter
+    Parameter:
+        grid (array): An 0's and 1's array that represents an island (1)
+        sourrounded by water (0)
+    Returns:
+        The island's perimeter
     """
-    count = 0
-    connection_h = 0
-    connection_v = 0
-    # Count horizontal connection of numbers 1
-    for _list in grid:
-        i = 1
-        for number in _list:
-            if number == 1:
-                count += 1
-                if i < len(_list) and number == _list[i]:
-                    connection_h += 1
-            i += 1
-    # Count vertical connection of numbers 1
-    for index, _list in enumerate(grid):
-        for i in range(0, len(_list)):
-            if index < len(grid) - 1:
-                if _list[i] == 1 and _list[i] == grid[index + 1][i]:
-                    connection_v += 1
-    total = count * 4
-    horizontal = connection_h * 2
-    vertical = connection_v * 2
-    perimeter = total - horizontal - vertical
+    rows = len(grid)
+    cols = len(grid[0])
+    perimeter = 0
+    for i in range(1, rows - 1):
+        for j in range(1, cols - 1):
+            if grid[i][j] == 1:
+                if grid[i - 1][j] == 0:
+                    perimeter += 1
+                if grid[i + 1][j] == 0:
+                    perimeter += 1
+                if grid[i][j - 1] == 0:
+                    perimeter += 1
+                if grid[i][j + 1] == 0:
+                    perimeter += 1
     return perimeter
